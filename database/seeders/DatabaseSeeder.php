@@ -25,9 +25,9 @@ class DatabaseSeeder extends Seeder
             CitySeeder::class,
         );
 
-        HotelFactory::factory()->count(10)->create();
-        RoomFactory::factory()->count(10)->create();
-        GuestFactory::factory()->count(10)->create();
-        BookingFactory::factory()->count(10)->create();
+        Hotel::factory()->count(10)->create();
+        Room::factory()->count(10)->create();
+        Guest::factory()->count(10)->create();
+        Booking::factory()->count(10)->create();
     }
 }
