@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('room_num');
             $table->enum('type', ['single','double']);
             $table->float('per_night_price');
-            $table->boolean('is_available')->default(true);
+            $table->boolean('is_available')->default(false);
             $table->timestamps();
         });
     }

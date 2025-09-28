@@ -2,6 +2,8 @@
 
 namespace Database\Factories;
 
+use App\Models\City;
+use Database\Seeders\CitySeeder;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -16,8 +18,15 @@ class HotelFactory extends Factory
      */
     public function definition(): array
     {
+        $cityId = City::inRandomOrder()->first();
+
         return [
-            //
+            "city_id"=> $cityId-> id,
+            "name"=> fake()-> name,
+            "address"=> fake()-> address,
+            "phone_num"=> fake()-> phoneNumber(),
+            "email"=> fake()-> email,
+            "star"=> fake()-> numberBetween(1,5),
         ];
     }
 }
