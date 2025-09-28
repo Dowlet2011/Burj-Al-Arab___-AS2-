@@ -2,6 +2,10 @@
 
 namespace Database\Seeders;
 
+use App\Models\Booking;
+use App\Models\Guest;
+use App\Models\Hotel;
+use App\Models\Room;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -13,11 +17,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
+        $this->call(
+            CitySeeder::class,
+        );
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
-        ]);
+        Hotel::factory()->count(10)->create();
+        Room::factory()->count(10)->create();
+        Guest::factory()->count(10)->create();
+        Booking::factory()->count(10)->create();
     }
 }
