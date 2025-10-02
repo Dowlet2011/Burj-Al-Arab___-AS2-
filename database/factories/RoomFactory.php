@@ -21,7 +21,7 @@ class RoomFactory extends Factory
         return [
             "hotel_id"=> $hotelId-> id,
             "room_num"=> fake()-> numberBetween(101,1299),
-            "type"=> fake()-> randomElement(["single", "double"]),
+            "type"=> fake()-> randomElement(["single", "double", "lux", "vip"]),
             "per_night_price"=> fake()-> randomFloat(2, 10, 1255),
             "is_available"=> fake()-> boolean(60)
         ];

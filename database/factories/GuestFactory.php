@@ -19,7 +19,7 @@ class GuestFactory extends Factory
         return [
             "firstname"=> fake()-> firstName(),
             "lastname"=> fake()-> lastName(),
-            "passport_num"=> fake()-> word(),
+            "passport_num"=> fake()-> randomNumber(6),
         ];
     }
 }

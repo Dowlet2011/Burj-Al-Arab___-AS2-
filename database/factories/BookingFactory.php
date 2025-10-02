@@ -23,7 +23,7 @@ class BookingFactory extends Factory
         $guestId = Guest::inRandomOrder()->first();
 
         $check_in = Carbon::createFromDate(2024, 1, 1)-> addDays(rand(0, 700));
-        $check_out = (clone $check_in)->addDays(rand(2, 10));
+        $check_out = (clone $check_in)->addDays(rand(2, 7));
 
         return [
             "room_id"=> $roomId,

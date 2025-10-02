@@ -19,6 +19,10 @@ class CitySeeder extends Seeder
             'Istanbul',
             'Paris',
             'London',
+            'New Delhi',
+            'Rome',
+            'Moscow',
+            'Viena',
         ];
 
         foreach ($cities as $city) {
