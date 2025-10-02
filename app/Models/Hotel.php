@@ -15,6 +15,7 @@ class Hotel extends Model
     protected $guarded = ["id"];
 
     protected $fillable = [
+        "city_id",
         "name",
         "address",
         "phone_num",

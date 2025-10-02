@@ -14,6 +14,7 @@ class Room extends Model
     protected $guarded = ["id"];
     
     protected $fillable = [
+        "hotel_id",
         "room_num",
         "type",
         "per_night_price",

@@ -15,6 +15,8 @@ class Booking extends Model
     protected $guarded = ["id"];
 
     protected $fillable = [
+        "room_id",
+        "guest_id",
         "check_in", 
         "check_out",
     ];
